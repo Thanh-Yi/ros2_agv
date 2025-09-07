@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<robot name="agv" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Argument để bật/tắt plugin -->
+    <xacro:arg name="use_gazebo" default="false"/>
+
+    <!-- include các phần robot -->
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/base_link.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/caster_behind_left.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/caster_behind_right.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/caster_up_left.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/caster_up_right.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/wheel_left.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/wheel_right.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/lidar.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/xacro_agv/imu.xacro"/>
+
+    <!-- build robot -->
+    <xacro:base_link/>
+    <xacro:caster_behind_left/>
+    <xacro:caster_behind_right/>
+    <xacro:caster_up_left/>
+    <xacro:caster_up_right/>
+    <xacro:wheel_left/>
+    <xacro:wheel_right/>
+    <xacro:laser/>
+    <xacro:imu/>
+
+    <!-- chỉ include ros2_control khi chạy với Gazebo -->
+    <xacro:if value="$(arg use_gazebo)">
+        <xacro:include filename="$(find step_01_robot_description)/xacro_agv/ros2_control.xacro"/>
+    </xacro:if>
+
+</robot>

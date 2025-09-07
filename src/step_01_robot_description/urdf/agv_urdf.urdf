@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="agv_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0158113057544982 -0.00142019642296115 0.0301376227857992"
+        rpy="0 0 0" />
+      <mass
+        value="1.26164162297982" />
+      <inertia
+        ixx="0.00559162657435222"
+        ixy="1.29976054416456E-06"
+        ixz="5.20652580120042E-05"
+        iyy="0.00700570051915973"
+        iyz="-4.3171949397396E-07"
+        izz="0.0120377937635134" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Wheel_right">
+    <inertial>
+      <origin
+        xyz="-6.77892038325467E-06 0.00878337503055526 -6.04590711569841E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0444228549638229" />
+      <inertia
+        ixx="2.01439514117687E-05"
+        ixy="1.08786988884335E-10"
+        ixz="7.2514336287529E-09"
+        iyy="3.55612270317391E-05"
+        iyz="-2.13109351732938E-10"
+        izz="2.0144556915686E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/Wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/Wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_right_jt"
+    type="continuous">
+    <origin
+      xyz="-0.00097938 -0.1065 0.013"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_right" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Wheel_left">
+    <inertial>
+      <origin
+        xyz="6.84306026305093E-06 -0.0087833750304501 5.97320507063283E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0444228549621077" />
+      <inertia
+        ixx="2.01463395995947E-05"
+        ixy="-1.97902606325867E-10"
+        ixz="6.95168400298356E-09"
+        iyy="3.55612270305918E-05"
+        iyz="1.34479474223863E-10"
+        izz="2.01421687267013E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/Wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/Wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_left_jt"
+    type="continuous">
+    <origin
+      xyz="0.0010206 0.1065 0.013"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_left" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="MT_up_left">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 2.77555756156289E-17 0.0127957030881675"
+        rpy="0 0 0" />
+      <mass
+        value="0.0114608893813283" />
+      <inertia
+        ixx="9.23796782399639E-07"
+        ixy="-5.20030944551867E-14"
+        ixz="-1.47089664761454E-21"
+        iyy="8.85896298688249E-07"
+        iyz="3.00344316134755E-23"
+        izz="1.34461458261358E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_up_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.690196078431373 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_up_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MT_up_left_jt"
+    type="fixed">
+    <origin
+      xyz="0.11002 0.095 -0.019"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="MT_up_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="MT_up_right">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 5.55111512312578E-17 0.0127957030881675"
+        rpy="0 0 0" />
+      <mass
+        value="0.0114608893813283" />
+      <inertia
+        ixx="9.23796782399638E-07"
+        ixy="-5.20030942586909E-14"
+        ixz="-1.44159798995471E-21"
+        iyy="8.85896298688249E-07"
+        iyz="-1.00751588686331E-22"
+        izz="1.34461458261358E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_up_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.690196078431373 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_up_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MT_up_right_jt"
+    type="fixed">
+    <origin
+      xyz="0.11002 -0.095 -0.019"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="MT_up_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="MT_behind_left">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 0.0127957030881675"
+        rpy="0 0 0" />
+      <mass
+        value="0.0114608893813283" />
+      <inertia
+        ixx="9.23796782399639E-07"
+        ixy="-5.20030943431053E-14"
+        ixz="-1.53995858062195E-21"
+        iyy="8.8589629868825E-07"
+        iyz="4.55127663837556E-23"
+        izz="1.34461458261358E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_behind_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.690196078431373 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_behind_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MT_behind_left_jt"
+    type="fixed">
+    <origin
+      xyz="-0.10998 0.095 -0.019"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="MT_behind_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="MT_behind_right">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 5.55111512312578E-17 0.0127957030881676"
+        rpy="0 0 0" />
+      <mass
+        value="0.0114608893813283" />
+      <inertia
+        ixx="9.23796782399639E-07"
+        ixy="-5.20030947803236E-14"
+        ixz="-1.45683296199485E-21"
+        iyy="8.8589629868825E-07"
+        iyz="-1.16610393998141E-22"
+        izz="1.34461458261358E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_behind_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.690196078431373 0.658823529411765 0.63921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/MT_behind_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MT_behind_right_jt"
+    type="fixed">
+    <origin
+      xyz="-0.10998 -0.095 -0.019"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="MT_behind_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="0.00613373292374306 -0.000194739234815999 -0.0223629310337731"
+        rpy="0 0 0" />
+      <mass
+        value="0.167234520956808" />
+      <inertia
+        ixx="7.83297952695099E-05"
+        ixy="-9.41525292178444E-08"
+        ixz="2.21315211543089E-05"
+        iyy="0.000121710164909535"
+        iyz="-3.97402221956207E-07"
+        izz="0.000140309987003384" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://step_01_robot_description/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_jt"
+    type="fixed">
+    <origin
+      xyz="-1.6491E-05 9.9081E-05 0.1022"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

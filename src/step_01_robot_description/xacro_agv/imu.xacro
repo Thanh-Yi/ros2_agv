@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="imu" params="">
+        <link name="imu_link">
+            <inertial>
+                <mass value="0.01"/>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+            </inertial>
+            <visual>
+                <geometry>
+                    <box size="0.05 0.05 0.05"/>
+                </geometry>
+                <material name="imu_material"> 
+                    <color rgba="0.5 0.5 0.5 1.0"/>
+                </material>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.05 0.05 0.05"/>
+                </geometry>
+            </collision>
+        </link>
+        
+        <joint name="imu_joint" type="fixed">
+            <parent link="base_link"/>
+            <child link="imu_link"/>
+            <origin xyz="0.0005 0.00076 0.0359" rpy="0 0 0"/>
+        </joint>
+    </xacro:macro>
+</robot>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="caster_up_left">
+    <!-- Link definition -->
+    <link name="MT_up_left">
+      <inertial>
+        <origin xyz="-2.77555756156289e-17 2.77555756156289e-17 0.0127957030881675" rpy="0 0 0"/>
+        <mass value="0.0114608893813283"/>
+        <inertia 
+          ixx="9.23796782399639e-07" 
+          ixy="-5.20030944551867e-14" 
+          ixz="-1.47089664761454e-21"
+          iyy="8.85896298688249e-07" 
+          iyz="3.00344316134755e-23" 
+          izz="1.34461458261358e-06"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://step_01_robot_description/meshes/MT_up_left.STL"/>
+        </geometry>
+        <material name="caster_gray">
+          <color rgba="0.69 0.66 0.64 1"/>
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://step_01_robot_description/meshes/MT_up_left.STL"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Joint definition -->
+    <joint name="MT_up_left_jt" type="fixed">
+      <origin xyz="0.11002 0.095 -0.0204" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="MT_up_left"/>
+    </joint>
+  </xacro:macro>
+
+</robot>

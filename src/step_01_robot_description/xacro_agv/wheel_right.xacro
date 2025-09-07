@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="wheel_right">
+    <link name="Wheel_right">
+      <inertial>
+        <origin xyz="-6.77892038325467E-06 0.00878337503055526 -6.04590711569841E-06" rpy="0 0 0" />
+        <mass value="0.0444228549638229" />
+        <inertia ixx="2.01439514117687E-05" ixy="1.08786988884335E-10" ixz="7.2514336287529E-09" iyy="3.55612270317391E-05" iyz="-2.13109351732938E-10" izz="2.0144556915686E-05" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://step_01_robot_description/meshes/Wheel_right.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://step_01_robot_description/meshes/Wheel_right.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="Wheel_right_jt" type="continuous">
+      <origin xyz="-0.00097938 -0.1065 0.013" rpy="0 0 0" />
+      <parent link="base_link" />
+      <child link="Wheel_right" />
+      <axis xyz="0 1 0" />
+    </joint>
+  </xacro:macro>
+</robot>

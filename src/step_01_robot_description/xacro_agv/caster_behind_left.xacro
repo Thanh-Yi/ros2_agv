@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="caster_behind_left">
+    <link name="MT_behind_left">
+      <inertial>
+        <origin xyz="0 2.77555756156289E-17 0.0127957030881675" rpy="0 0 0" />
+        <mass value="0.0114608893813283" />
+        <inertia ixx="9.23796782399639E-07"
+                 ixy="-5.20030943431053E-14"
+                 ixz="-1.53995858062195E-21"
+                 iyy="8.8589629868825E-07"
+                 iyz="4.55127663837556E-23"
+                 izz="1.34461458261358E-06" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://step_01_robot_description/meshes/MT_behind_left.STL" />
+        </geometry>
+        <material name="grey">
+          <color rgba="0.69 0.66 0.63 1" />
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://step_01_robot_description/meshes/MT_behind_left.STL" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="MT_behind_left_jt" type="fixed">
+      <origin xyz="-0.10998 0.095 -0.0204" rpy="0 0 0" />
+      <parent link="base_link"/>
+      <child link="MT_behind_left"/>
+    </joint>
+  </xacro:macro>
+
+</robot>
