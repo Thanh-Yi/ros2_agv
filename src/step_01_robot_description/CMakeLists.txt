@@ -10,7 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
 
 install(
-  DIRECTORY xacro_agv meshes config params meshes launch rviz
+  DIRECTORY xacro_agv meshes config params meshes launch rviz control
   DESTINATION share/${PROJECT_NAME}
 )
 

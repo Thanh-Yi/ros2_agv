@@ -12,8 +12,8 @@
         <geometry>
           <mesh filename="package://step_01_robot_description/meshes/Wheel_left.STL" />
         </geometry>
-        <material name="">
-          <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        <material name="Red">
+          <color rgba="1 0 0 1" />
         </material>
       </visual>
       <collision>

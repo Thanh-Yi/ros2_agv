@@ -14,6 +14,7 @@
     <xacro:include filename="$(find step_01_robot_description)/xacro_agv/wheel_right.xacro"/>
     <xacro:include filename="$(find step_01_robot_description)/xacro_agv/lidar.xacro"/>
     <xacro:include filename="$(find step_01_robot_description)/xacro_agv/imu.xacro"/>
+    <xacro:include filename="$(find step_01_robot_description)/control/agv.gazebo"/>
 
     <!-- build robot -->
     <xacro:base_link/>

@@ -1,0 +1,38 @@
+<robot>
+  <gazebo>
+    <!-- DiffDrive Plugin -->
+    <plugin name="gz::sim::systems::DiffDrive"
+            filename="gz-sim-diff-drive-system">
+
+      <!-- Topic để nhận lệnh điều khiển -->
+      <topic>cmd_vel</topic>
+
+      <!-- Liệt kê các joint điều khiển -->
+      <left_joint>Wheel_left_jt</left_joint>
+      <right_joint>Wheel_right_jt</right_joint>
+
+      <!-- Các tham số cơ bản -->
+      <wheel_separation>0.222</wheel_separation>   <!-- khoảng cách 2 bánh -->
+      <wheel_radius>0.065</wheel_radius>           <!-- bán kính bánh xe -->
+
+      <!-- Giới hạn tăng tốc -->
+      <max_linear_acceleration>5.0</max_linear_acceleration>
+      <max_angular_acceleration>5.0</max_angular_acceleration>
+
+      <!-- Xuất dữ liệu odometry -->
+      <odom_topic>odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_tf>true</publish_tf>
+    </plugin>
+
+    <!-- Joint State Publisher -->
+    <plugin name="gz::sim::systems::JointStatePublisher"
+            filename="gz-sim-joint-state-publisher-system">
+      <topic>joint_states</topic>
+      <joint_name>Wheel_left_jt</joint_name>
+      <joint_name>Wheel_right_jt</joint_name>
+    </plugin>
+  </gazebo>
+</robot>

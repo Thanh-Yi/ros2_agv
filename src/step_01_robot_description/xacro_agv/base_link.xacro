@@ -16,8 +16,8 @@
         <geometry>
           <mesh filename="package://step_01_robot_description/meshes/base_link.STL" />
         </geometry>
-        <material name="grey">
-          <color rgba="0.79 0.82 0.93 1" />
+        <material name="Blue">
+          <color rgba="0 0 1 1" />
         </material>
       </visual>
 

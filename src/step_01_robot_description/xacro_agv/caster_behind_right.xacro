@@ -18,8 +18,8 @@
         <geometry>
           <mesh filename="package://step_01_robot_description/meshes/MT_behind_right.STL" />
         </geometry>
-        <material name="">
-          <color rgba="0.690196078431373 0.658823529411765 0.63921568627451 1" />
+        <material name="red">
+          <color rgba="1 0 0 1" />
         </material>
       </visual>
 
