@@ -28,8 +28,8 @@
     <xacro:imu/>
 
     <!-- chỉ include ros2_control khi chạy với Gazebo -->
-    <xacro:if value="$(arg use_gazebo)">
+    <!-- <xacro:if value="$(arg use_gazebo)">
         <xacro:include filename="$(find step_01_robot_description)/xacro_agv/ros2_control.xacro"/>
-    </xacro:if>
+    </xacro:if> -->
 
 </robot>
