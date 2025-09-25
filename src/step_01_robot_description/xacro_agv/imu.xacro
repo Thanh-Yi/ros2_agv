@@ -30,13 +30,28 @@
 
         <!-- 2.5.2 IMU gz sim properties -->
         <gazebo reference="imu">
-            <sensor name="imu" type="imu">
-                <topic>imu</topic>
-                <update_rate>30.0</update_rate>
-                <always_on>true</always_on>
-                <visualize>true</visualize>
-                <gz_frame_id>imu</gz_frame_id>
-            </sensor>
+        <sensor name="imu" type="imu">
+            <topic>imu</topic>
+            <update_rate>50.0</update_rate>   <!-- có thể tăng lên cho mượt -->
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <gz_frame_id>imu</gz_frame_id>
+            <imu>
+            <angular_velocity>
+                <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0</stddev>   <!-- tắt noise -->
+                </noise>
+            </angular_velocity>
+            <linear_acceleration>
+                <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0</stddev>
+                </noise>
+            </linear_acceleration>
+            </imu>
+        </sensor>
         </gazebo>
+
     </xacro:macro>
 </robot>
